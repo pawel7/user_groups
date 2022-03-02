@@ -1,26 +1,28 @@
+# Simple user and user group management in PHP
+
 ## Project requirements:
 
-Back-end: PHP7 + using the MVC principle but without using additional frameworks.
-Front-end: Use of jQuery is welcome.
-Base: mysql or mariadb
+Back-end: `PHP7` + using the MVC principle but without using additional frameworks.
+Front-end: Use of `jQuery` is welcome.
+Database: `Mysql` or `Mariadb`
 
-Functionalities:
+### Functionalities:
  
 1. User management:
  
 a. List of users
-b. Adding a User
-c. Removing a User
-d. Editing a user
+b. Add a user
+c. Remove a user
+d. Edit a user
  
-2. Managing user groups:
+2. User groups management:
  
 a. List of user groups
-b. Adding a group of users
-c. Removing a user group
-d. Editing a user group
+b. Add a group of users
+c. Remove a group
+d. Edit a group
 
-Data structure
+### Data structure
  
 1. User:
 

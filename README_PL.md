@@ -1,11 +1,11 @@
 ## Wymagania co do projektu:  
 
-Back-end: PHP7+, bez używania dodatkowych frameworków z wykorzystaniem zasady MVC.
-Front-end: Mile widziane użycie jQuery.
-Baza: mysql lub mariadb
+Back-end: `PHP7+`, bez używania dodatkowych frameworków z wykorzystaniem zasady MVC.
+Front-end: Mile widziane użycie `jQuery`.
+Baza danych: `Mysql` lub `Mariadb`
 
 
-Funkcjonalności:
+### Funkcjonalności:
  
 1. Zarządzanie użytkownikami:
  
@@ -21,8 +21,7 @@ b. Dodawanie grupy użytkowników
 c. Usuwanie grupy użytkowników  
 d. Edycja grupy użytkowników  
 
-
-Struktura danych
+### Struktura danych
  
 1. Użytkownik:
 
