@@ -2,9 +2,9 @@
 
 ## Założenia projektu:  
 
-Back-end: `PHP7+`, bez używania dodatkowych frameworków z wykorzystaniem zasady MVC.
-Front-end: Mile widziane użycie `jQuery`.
-Baza danych: `Mysql` lub `Mariadb`
+Back-end: `PHP7+`, bez używania dodatkowych frameworków z wykorzystaniem zasady MVC.  
+Front-end: Mile widziane użycie `jQuery`.  
+Baza danych: `Mysql` lub `Mariadb`.  
 
 
 ### Funkcjonalności:
@@ -49,7 +49,8 @@ Modele są w folderze `models`, a widoki to `users_view.php` i `groups_view.php`
 
 Można dodawać i usuwać użytkowników, grupy, a także dodawać i usuwać użytkowników do/z grupy oraz dodawać i usuwać grupy dla danego użytkownika.  
 
-Grupy nie można usunąć, gdy ma ona użytkowników. Przycisk `Delete group` jest wtedy nieaktywny.  
+Grupy nie można usunąć, gdy ma ona użytkowników.  
+Przycisk `Delete group` jest wtedy nieaktywny.  
 
 Natomiast można usunąć użytkownika, mimo iż jest w jakichś grupach - wtedy zostanie on usunięty z nich, dzięki *kaskadom* w bazie:  
 
