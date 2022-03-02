@@ -44,7 +44,7 @@ public static function Show_Groups()
     else
     {
     ?>
- <h2 class="center">Groups list</h2>
+ <h2 class="center">Group list</h2>
  <table class="table table-success table-striped">
  <thead>
      <tr>

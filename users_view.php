@@ -46,16 +46,16 @@ public static function Show_Users()
     else
     {
     ?>
- <h2 class="center">Users list</h2>
+ <h2 class="center">User list</h2>
  <table class="table table-success table-striped">
  <thead>
      <tr>
         <th>Id</th><th>User name</th>
-        <th>Password <span id="toggle_pwd">hide</span</th>
+        <th><span id="pwd_th">Password </span><i id="toggle_pwd">hide</i></th>
         <th>First name</th>
         <th>Last name</th>
         <th>Date of birth</th>
-        <th>Groups</th>
+        <th>Groups <i id="toggle_compact">compact</i></th>
         <th>User action</th>
         <th>Group action</th>
       </tr>
@@ -70,35 +70,27 @@ public static function Show_Users()
         $firstname = $user['firstname'];
         $lastname = $user['lastname'];
         $born_at = $user['born_at'];
-        $group_names = str_replace(',', ', ', $user['group_names'] );
+
+        $group_names = empty($user['group_names']) ? array() : explode( ',', $user['group_names'] );
+		//my_dump($group_names, 'group_names' );
+
+        //$group_names = str_replace(',', ', ', $user['group_names'] );
         
         //$group_ids = str_replace(',', ', ', $user['group_ids'] );
     ?>
       <tr>
         <td><?= $id ?></td>
         <td><?= $username ?></td><td><span class="passwd"><?= $password ?></span></td><td><?= $firstname ?></td>
-        <td><?= $lastname ?></td><td><?= $born_at ?> </td><td><?= $group_names ?></td>
+        <td><?= $lastname ?></td><td><?= $born_at ?> </td><td class="grp_names"><ul class="ul_toggle"><?php 
+			  foreach( $group_names as $group_name )
+			  {
+				  echo "<li>$group_name</li>";
+			  } 
+			?></ul></td>
         <td class="center">
         <a href="edit_user.php?id=<?= $id ?>"><i class="bi bi-pencil"></i></a>
     </td>
-        <td class="center">
-        <a href="edit_user_groups.php?id=<?= $id ?>"><i class="bi bi-pencil"></i></a>
-        
-         <!--a href="#editUserModal" class="edit" data-toggle="modal">
-			<i class="material-icons update" data-toggle="tooltip" 
-			data-id="<?= $id ?>"
-			data-username="<?= $username ?>"
-			data-password="<?= $password ?>"
-			data-firstname="<?= $firstname ?>"
-			data-lastname="<?= $lastname ?>"
-			data-born_at="<?= $born_at ?>"
-			title="Edit"></i>
-		 </a>
-		 <a href="#deleteUserModal" class="delete" data-id="<?= $id ?>" data-toggle="modal">
-            <i class="material-icons" data-toggle="tooltip" 
-			   title="Delete"></i>
-         </a-->
-        </td>
+        <td class="center"><a href="edit_user_groups.php?id=<?= $id ?>"><i class="bi bi-pencil"></i></a></td>
         </tr>
         <?php
     } //  foreach( $users as $user )

@@ -8,6 +8,8 @@ CREATE TABLE `groups` (
 PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE `groups` ADD UNIQUE( `name`);
+
 CREATE TABLE `users` (
   `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
@@ -17,6 +19,8 @@ CREATE TABLE `users` (
   `born_at` date NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `users` ADD UNIQUE( `username`);
 
 CREATE TABLE `user_groups` (
   `group_id` int UNSIGNED NOT NULL,
@@ -29,7 +33,8 @@ CREATE TABLE `user_groups` (
 INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `born_at`) 
 VALUES (NULL, 'adam', md5('kzwimz'), 'Adam', 'Adamski', '1980-01-01'),
        (NULL, 'beata', md5('pscts'), 'Beata', 'Babacka', '1992-02-02'),
-       (NULL, 'celina', md5('1234'), 'Celina', 'Kowalska', '2003-03-03');
+       (NULL, 'celina', md5('1234'), 'Celina', 'Kowalska', '2003-03-03'),
+       (NULL, 'dorota', md5('2345'), 'Dorota', 'Nowak', '1990-04-04');
 
 INSERT INTO `groups` (`id`, `name`) 
   VALUES 

@@ -7,7 +7,7 @@ input, textarea, select, option, datalist{
 }
 
 .container {
-    width: 1024px;
+    width: 1200px;
     margin: auto;
 }
 
@@ -17,6 +17,40 @@ input, textarea, select, option, datalist{
 
 .info {
     color: green;
+}
+
+ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+ul.compact {
+    list-style-type: none;
+    padding-left: 1px;
+}
+
+td.grp_names li {
+    padding-bottom: 5px;
+}
+
+td.grp_names ul.compact li {
+    display: inline;
+}
+
+td.grp_names ul.compact li::after {
+    content: ', '
+}
+
+td.grp_names ul.compact li:last-child::after {
+    content: ''
+}
+
+td.grp_names li:nth-child(odd) {
+    color:#125;
+}
+
+td.grp_namess li:nth-child(even) {
+    color: #152;
 }
 
 .warning {
@@ -70,9 +104,11 @@ input.long {
 .left {
     text-align: left;
 }
-#toggle_pwd{
+
+#toggle_pwd, #toggle_compact{
     color: darkgreen;
 }
+
 #toggle_pwd.hid{
     color:#257;
 }

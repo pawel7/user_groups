@@ -12,6 +12,7 @@ require_once 'connect.php';
 
 if(count($_POST)>0)
 {
+	//my_dump( $_POST, '_POST');
 	if( isset($_POST['delete'] ))
 	{
 		//require_once 'users_view.php';
@@ -41,7 +42,6 @@ if(count($_POST)>0)
 	}
 	else
 
-	// my_dump( $_POST, '_POST');
 	if($_POST['action']=='add'){
 		$username = $_POST['username'];
         $password = md5( $_POST['password'] );
@@ -51,8 +51,11 @@ if(count($_POST)>0)
 		
 		$query = "INSERT INTO `users`( username, `password`, firstname, lastname, born_at )  
 		VALUES ('$username','$password','$firstname','$lastname', '$born_at')";
-		//$result = $mysqli->query($query);
-		if($mysqli->query($query)) {
+		$result = $mysqli->query($query);
+		//my_dump($result,'result');
+		if($result) {
+			$cnt = $result->num_rows;
+			//my_dump($cnt,'cnt');
 			Info( "New user <b>$username ( $firstname $lastname )</b> was added" );
 			//echo json_encode(array("statusCode"=>200));
 		} 
