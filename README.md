@@ -47,9 +47,10 @@ User list: `show_users.php`.
 group list: `show_groups.php`.  
 
 All editing actions are done in these files.  
-The models are in the `models` folder and the views are `users_view.php` and `groups_view.php`.  
+The models are in the `models` folder.   
+There are two views: `users_view.php` and `groups_view.php`.  
 
-You can add or remove users, as well as groups add and remove users to / from a group, and add and remove groups for a given user.  
+You can add or remove users, as well as groups; add and remove users from a group, and add and remove groups for a given user.  
 
 A group cannot be deleted when it has users.   
 The `Delete group` button is then disabled.  
@@ -62,7 +63,7 @@ ALTER TABLE `user_groups` ADD  FOREIGN KEY (`user_id`)
 REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 ```
 
-`JQuery` is only used to remove the `Required` attribute when pressing `Delete` and `Cancel` and to change the display of a group list and to hide the password column.
+`jQuery` is only used to remove the `Required` attribute when pressing `Delete` and `Cancel`, to change the display of a group list and to hide the password column.
 
 ## To do 
 
