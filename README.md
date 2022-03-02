@@ -50,7 +50,7 @@ All editing actions are done in these files.
 The models are in the `models` folder.   
 There are two views: `users_view.php` and `groups_view.php`.  
 
-You can add or remove users, as well as groups; add and remove users from a group, and add and remove groups for a given user.  
+You can add or remove users, as well as groups; add/remove users from a group, and add/remove groups for a given user.  
 
 A group cannot be deleted when it has users.   
 The `Delete group` button is then disabled.  
